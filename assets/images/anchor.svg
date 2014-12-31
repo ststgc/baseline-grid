@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="84px" height="83px" viewBox="0 0 84 83" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>anchor</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="anchor" sketch:type="MSLayerGroup" transform="translate(3.000000, 3.000000)">
+            <g id="Page-1" sketch:type="MSShapeGroup">
+                <g id="Artboard-2">
+                    <g id="anchor">
+                        <circle id="Oval-1" stroke="#4958E5" stroke-width="6" cx="39" cy="9" r="9"></circle>
+                        <path d="M0,38 C0,59.5391052 17.4608948,77 39,77 C60.5391052,77 78,59.5391052 78,38" id="Oval-2" stroke="#4958E5" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <rect id="Rectangle-1" fill="#4958E5" x="36" y="15" width="6" height="62"></rect>
+                        <path d="M29.5163122,38 L48.0326304,38" id="Line" stroke="#4958E5" stroke-width="6" stroke-linecap="round"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
