@@ -1,0 +1,24 @@
+//
+// Base
+// ------------
+
+html,
+\:root
+    font-family: $font-sans
+    font-size: $base-font-size
+    line-height: $baseline-unitless
+    font-weight: 300
+    text-size-adjust: none
+    text-rendering: optimizeLegibility
+    -webkit-font-smoothing: antialiased
+    font-feature-settings: "liga" 1, "onum" 1, "kern" 1
+    font-kerning: normal
+    background-color: $body-background
+    color: $body-text-color
+
+    +breakpoint(palm)
+        font-size: 100%
+
+body
+    +breakpoint(lap)
+        padding: $baseline

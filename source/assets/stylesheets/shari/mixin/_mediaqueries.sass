@@ -1,0 +1,24 @@
+//
+// Break Points for RWD
+// http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+// http://css-tricks.com/media-queries-sass-3-2-and-codekit/
+
+
+// valiables
+$desk: 1400px
+$lap:  1000px
+$palm: 500px
+
+
+=breakpoint($point)
+    // default breakpoints
+    @if $point == desk
+        @media (max-width: $desk)
+            @content
+    @if $point == lap
+        @media (max-width: $lap)
+            @content
+    @else if $point == palm
+        @media (max-width: $palm)
+            @content
+

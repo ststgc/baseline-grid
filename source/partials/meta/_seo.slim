@@ -1,0 +1,11 @@
+
+/ Data is set in ``data/meta.yml``
+meta name="description" content="#{data.meta.description}"
+meta itemprop="image" content="#{data.meta.image}"
+title itemprop="name"
+    - if current_page.data.title
+        = current_page.data.title
+    - else
+        = data.meta.title
+link itemprop="url" href="#{data.meta.url}"
+link rel="canonical" href="#{data.meta.url}"

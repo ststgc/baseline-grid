@@ -1,0 +1,54 @@
+# &url links to *url
+
+# Metadata
+lang: "ja"
+prefix: "og: http://ogp.me/ns# fb: http://www.facebook.com/2008/fbml"
+itemtype: "WebPage"
+viewport: "width=device-width, initial-scale=1"
+userAgentCompatible: "IE=edge"
+image: http://your-site-image.com/image-url.png
+url: &url
+    'http://baseline-grid.com'
+title: &title
+    'Baseline Grid'
+description: &description
+    'A light framework for modern web development'
+locale: &locale
+    ja: 'ja'
+keywords: &keyworkds
+    'Typography, Grid, CSS Framework, Responsive, Object Oriented, BEM'
+
+
+# In general open graph protocol
+og:
+    # Required
+    title: *title
+    type:
+    image: ['URL.com']
+    url: *url
+
+    # Optional but recommended
+    locale: 'en_EN'
+    site_name: *title
+    description: *description
+
+
+# Twitter in spesific
+twitter:
+    lang: 'en'
+    hashtags: 'hone'
+    site: *title
+    text: *title
+    type: 'summary_large_image'
+    domain: *url
+
+# Google id
+google:
+    id: (Google+ ID)
+
+
+# Facebook id
+fb:
+    app_id: '(Facebook ID)'
+
+

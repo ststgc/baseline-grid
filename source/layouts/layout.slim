@@ -1,0 +1,37 @@
+doctype html
+html lang="#{data.meta.lang}" itemscope="" itemtype="http://schema.org/#{data.meta.itemtype}" prefix="#{data.meta.prefix}"
+    head
+
+        / Charset
+        = partial "meta/charset"
+
+        / SEO
+        = partial "meta/seo"
+
+        / Browser Stuff
+        = partial "meta/browser"
+
+        / OGP Stuff
+        = partial "meta/ogp"
+
+        / Typekit
+        = partial "script/typekit"
+
+        / Favicon
+        = partial "meta/favicon"
+
+        / Load stylesheets
+        == stylesheet_link_tag "sushi"
+
+
+    body class= "#{page_classes}"
+
+        == yield
+
+
+        / Javascript
+        == javascript_include_tag  "application"
+        == javascript_include_tag  "http://cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.1.5/ZeroClipboard.min.js"
+        / Google Analytics
+        / = partial 'script/google-analytics'
+

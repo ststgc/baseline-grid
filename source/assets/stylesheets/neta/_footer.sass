@@ -1,0 +1,28 @@
+.footer
+    margin-top: $baseline*3
+    margin-bottom: $baseline*3
+    +breakpoint(palm)
+        text-align: center
+
+.logo__footer
+    display: inline-block
+    vertical-align: middle
+    +breakpoint(palm)
+        text-align: center
+
+
+
+.copyright
+    font-size: $baseline/2.5
+    float: right
+    +breakpoint(palm)
+        display: block
+        float: none
+        margin-bottom: $baseline
+
+
+    a
+        margin-left: $baseline/5
+        color: $body-text-color
+        &:hover
+            color: $brand-primary

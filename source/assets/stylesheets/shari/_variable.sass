@@ -1,0 +1,85 @@
+
+// Variable
+// ----------------------------------------
+
+
+$basefont-unitless:      18
+$base-font-size:         ($basefont-unitless/16)*100%
+$baseline-unitless:      32 / $basefont-unitless
+$baseline:               $baseline-unitless * 1rem
+
+
+$font-name-one: "jaf-facitweb"
+$font-name-two: "freight-text-pro"
+
+
+$font-sans:    $font-name-one, YuGothic, sans-serif
+$font-serif:   $font-name-two, YuMincho, serif
+$font-body:    $font-sans
+$font-code:    "Source Code Pro", Menlo, monospace
+$font-logo:    "Avenir Next", YuGothic, sans-serif
+// $font-logo:    "Avenir Next", YuGothic, sans-serif
+$font-h1:      $font-logo
+$font-h2:      $font-logo
+$font-caption: $font-logo
+$font-section-header: $font-logo
+
+
+
+
+
+// Colors
+// ----------------------------------------
+
+// Color: Glayscale
+// Change the color
+// http://blog.typekit.com/2011/01/26/css-properties-that-affect-type-rendering/
+
+$white:           #fff
+$white-grayscale: #fbfcfc
+$black-10:        darken($white-grayscale, 10%)
+$black-20:        darken($white-grayscale, 20%)
+$black-30:        darken($white-grayscale, 30%)
+$black-40:        darken($white-grayscale, 40%)
+$black-50:        darken($white-grayscale, 50%)
+$black-60:        darken($white-grayscale, 60%)
+$black-70:        darken($white-grayscale, 70%)
+$black-80:        darken($white-grayscale, 80%)
+$black-90:        darken($white-grayscale, 90%)
+// $black-100:
+
+// Color: Semantic
+$brand-primary: #4958E5
+// $brand-success: #5cb85c
+// $brand-warning: #f0ad4e
+// $brand-danger:  #d9534f
+// $brand-info:    #5bc0de
+
+
+// Color: Scaffolding
+// Apply above colors for specific cases.
+$body-background:          $white
+$body-text-color:          $black-70
+$body-link:                transparentize($brand-primary, .4)
+$body-link-hover:          $brand-primary
+$body-link-visited:        $black-20
+$body-strong:              transparentize($brand-primary, .75)
+$body-inline-code:         transparentize($brand-primary, .96)
+$body-blockquote:          transparentize($body-text-color, .5)
+$image-background:         $black-10
+$letter-link:              $brand-primary
+$meta:                     $black-20
+$meta-dark:                $black-40
+$table-border-light:       $black-10
+
+// Highlight selection color
+// -----------------------------------
+$selection-transparentize: .8
+$seelction-text-color:     $body-text-color
+
+
+// Breakpoints
+// -----------------------------------
+$lap-start:         62.5em!default
+$desk-start:        1000px!default
+$desk-wide-start:   1400px!default
