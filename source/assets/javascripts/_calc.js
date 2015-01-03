@@ -6,9 +6,9 @@
     var baseFontSize = f.baseFontSize;
     var ratio = f.ratio;
     var baselineHeight = f.baseline;
-    var objectHeight = f.objectHeight;
+    var contentHeight = f.contentHeight;
     var numOfBaselines = f.numOfBaselines;
-    var newObjectHeight = f.newObjectHeight;
+    var newContentHeight = f.newContentHeight;
     var outsideMargin = f.outsideMargin;
     var moreMarginThanBaseline = f.moreMarginThanBaseline;
     var takeCareOfRows = f.takeCareOfRows;
@@ -21,14 +21,14 @@
         baselineHeight.value = Math.round(baseFontSize.value*ratio.value*1000)/1000;
     };
     calcLines = function(){
-        lines = Math.floor(objectHeight.value/baselineHeight.value);
+        lines = Math.floor(contentHeight.value/baselineHeight.value);
         numOfBaselines.value = lines;
     };
-    calcNewObjectHeight = function(){
-        newObjectHeight.value = lines*baselineHeight.value;
+    calcNewContentHeight = function(){
+        newContentHeight.value = lines*baselineHeight.value;
     };
     calcOutsideMargin = function(){
-        outsideMargin.value = (objectHeight.value-newObjectHeight.value)/2;
+        outsideMargin.value = (contentHeight.value-newContentHeight.value)/2;
     };
 
     calcMoreMarginThanBaseline = function(){
@@ -36,8 +36,8 @@
             while(Number(outsideMargin.value) < Number(baselineHeight.value)){
                 --lines;
                 numOfBaselines.value = lines;
-                newObjectHeight.value = lines*baselineHeight.value;
-                outsideMargin.value = (objectHeight.value-newObjectHeight.value)/2;
+                newContentHeight.value = lines*baselineHeight.value;
+                outsideMargin.value = (contentHeight.value-newContentHeight.value)/2;
             }
         }
     };
@@ -112,11 +112,11 @@
     // Check input field
     validateInputs = function(){
         // validate object height input field
-        // if (objectHeight.innerHTML === 0){
+        // if (contentHeight.innerHTML === 0){
         //     console.log('empty');
         // } else {
         //     console.log('hello');
-        //     console.log(objectHeight.value);
+        //     console.log(contentHeight.value);
         // }
 
         if (takeCareOfRows.checked == true && rows.innerHTML == ""){
@@ -127,11 +127,11 @@
     copyAsMarkdown = function(){
         var copyButton = document.getElementById('copyAsMarkdown');
         var copy_sectionHead_keyValue = "# My key values";
-        var copy_objectHeight = "Object height: " + objectHeight.value;
+        var copy_contentHeight = "Object height: " + contentHeight.value;
         var copy_baseFontSize = "Base font size: " + baseFontSize.value;
         var copy_ratio = "Ratio: " + ratio.value + " (" + ratio.options[ratio.selectedIndex].text + ")";
         var copy_sectionHead_newValue = "# My new values";
-        var copy_newObjectHeight = "New object height: " + newObjectHeight.value;
+        var copy_newContentHeight = "New object height: " + newContentHeight.value;
         var copy_baselineHeight = "Baseline height: " + baselineHeight.value;
         var copy_numOfBaselines = "Number of baselines in the new object: " + numOfBaselines.value;
         var copy_outsideMargin = "Outside margin: " + outsideMargin.value;
@@ -140,11 +140,11 @@
 
         copyButton.dataset.clipboardText =
             copy_sectionHead_keyValue + "\n" +
-            copy_objectHeight + "\n" +
+            copy_contentHeight + "\n" +
             copy_baseFontSize + "\n" +
             copy_ratio + "\n" + "\n" +
             copy_sectionHead_newValue + "\n" +
-            copy_newObjectHeight + "\n" +
+            copy_newContentHeight + "\n" +
             copy_baselineHeight + "\n" +
             copy_numOfBaselines + "\n" +
             copy_outsideMargin + "\n";
@@ -164,7 +164,7 @@
     calculate = function(){
         calcBaselineHeight();
         calcLines();
-        calcNewObjectHeight();
+        calcNewContentHeight();
         calcOutsideMargin();
         calcMoreMarginThanBaseline();
         checkTakeCareOfRowsBtn();

@@ -13,9 +13,9 @@ title: Baseline Grid
                 | Playable values
         .grid-col.grid-col__1-of-2
             .calc__item
-                label for="objectHeight"
-                    | Object height
-                input#objectHeight name="objectHeight" type="number" pattern="[0-9]*" min="0" max="99999" maxlengt="5" size="6" value="297" requied="required"
+                label for="contentHeight"
+                    | Content height
+                input#contentHeight name="contentHeight" type="number" pattern="[0-9]*" min="0" max="99999" maxlengt="5" size="6" value="297" requied="required"
 
 
         .grid-col.grid-col__1-of-2
@@ -52,9 +52,9 @@ title: Baseline Grid
                 | Copy all as markdown?
         .grid-col.grid-col__1-of-2
             .calc__item.calc__item--output
-                label for="newObjectHeight"
-                    | New object height
-                input name="newObjectHeight" type="number" readonly="readonly"
+                label for="newContentHeight"
+                    | New content height
+                input name="newContentHeight" type="number" readonly="readonly"
         .grid-col.grid-col__1-of-2
             .calc__item.calc__item--output
                 label for="baseline"
@@ -63,7 +63,7 @@ title: Baseline Grid
         .grid-col.grid-col__1-of-2
             .calc__item.calc__item--output
                 label for="baseline"
-                    | # of baselines in the new object
+                    | # of baselines in the new content
                 input name="numOfBaselines" type="number" readonly="readonly"
         .grid-col.grid-col__1-of-2
             .calc__item.calc__item--output
@@ -77,7 +77,7 @@ title: Baseline Grid
         .grid-col.grid-col__1-of-1
             .calc__item.calc__item--output
                 label for="rows"
-                    | Valid rows
+                    | Valid rows with gutters that equates to baseline
                 span.calc__checkbox
                     label for="takeCareOfRows"
                         | Take care of rows
